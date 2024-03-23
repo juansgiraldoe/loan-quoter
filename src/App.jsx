@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from "./components/Header"
 import Button from "./components/Button"
+import { formatoDinero } from './helpers';
 
 function App() {
 
@@ -73,7 +74,9 @@ function App() {
         value={cantidad}
         onChange={handleChange}
       />
-      <p className='text-center my-10 text-5xl font-extrabold text-indigo-600'>{cantidad}</p>
+      <p className='text-center my-10 text-5xl font-extrabold text-indigo-600'>
+        {formatoDinero(cantidad)}
+      </p>
     </div>
 
   )
